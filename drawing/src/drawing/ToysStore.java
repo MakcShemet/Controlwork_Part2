@@ -12,6 +12,9 @@ public class ToysStore {
     public Toys getToyForPrize() {
         DrawingToys random = new DrawingToys();
         Toys toy = random.selectOnWeight(toys);
+        int countToys = toy.getCountToys();
+        countToys -= 1;
+            toy.setCountToys(countToys);
         return toy;
     }
 
@@ -28,9 +31,5 @@ public class ToysStore {
 
             System.out.println(ex.getMessage());
         }
-                
-        int countToys = toy.getCountToys();
-        countToys -= 1;
-            toy.setCountToys(countToys);
     }
 }

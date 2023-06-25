@@ -22,7 +22,7 @@ public class Main {
 
         ToysStore toyStore = new ToysStore(toys);
         toyStore.saveToyForDrawing();
-
+        
         for(Toys toy : toys) {
             System.out.println(toy);
         }
