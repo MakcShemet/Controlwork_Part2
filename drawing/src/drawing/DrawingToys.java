@@ -6,7 +6,6 @@ public class DrawingToys {
         for (Toys toy : toys)
             completeWeight += toy.getWeight();
         double r = Math.random() * completeWeight;
-        System.out.println(r);
         int countWeight = 0;
         for (Toys toy : toys) {
             countWeight += toy.getWeight();
