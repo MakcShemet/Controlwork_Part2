@@ -1,0 +1,103 @@
+┏━ msh : ~
+
+┗━ mkdir Игрушки_для_школьников
+
+┏━ msh : ~
+
+┗━ mkdir Игрушки_для_дошколят
+
+┏━ msh : ~
+
+┗━ cd Игрушки_для_школьников
+
+┏━ msh : ~/Игрушки_для_школьников
+
+┗━ touch Роботы.txt Конструкторы.txt Настольные_игры.txt
+
+┏━ msh : ~/Игрушки_для_школьников
+
+┗━ cd -
+
+/home/msh
+
+┏━ msh : ~
+
+┗━ cd Игрушки_для_дошколят
+
+┏━ msh : ~/Игрушки_для_дошколят
+
+┗━ touch Мягкие_игрушки.txt Куклы.txt Машинки.txt
+
+┏━ msh : ~/Игрушки_для_дошколят
+
+┗━ cd -
+
+/home/msh
+┏━ msh : ~
+
+┗━ mkdir Имя_Игрушки
+
+┏━ msh : ~
+
+┗━ mv Игрушки_для_школьников/* Игрушки_для_дошколят/* Имя_Игрушки/
+
+┏━ msh : ~
+
+┗━ mv Имя_Игрушки/ Игрушки
+
+┏━ msh : ~
+
+┗━ ls Игрушки/
+
+Конструкторы.txt  Машинки.txt         Настольные_игры.txt
+
+Куклы.txt         Мягкие_игрушки.txt  Роботы.txt
+┏━ msh : ~
+
+┗━ sudo snap install tree
+
+tree 1.8.0+pkg-3fd6 от 林博仁(Buo-ren, Lin) (brlin) установлен
+
+┏━ msh : ~
+
+┗━ sudo snap remove tree
+
+tree удалён
+
+┏━ msh : ~
+
+┗━ 
+
+┏━ msh : ~
+
+┗━ nano /home/msh/tmp/script_cron.sh
+
+┏━ msh : ~
+
+┗━ crontab -e
+
+crontab: installing new crontab
+┏━ msh : ~
+
+┗━ sudo chmod ugo+x /home/msh/tmp/script_cron.sh
+
+┏━ msh : ~
+
+┗━ crontab -l
+
+*/3 * * * * /home/msh/tmp/script_cron.sh
+
+┏━ msh : ~
+
+┗━ sudo chmod ugo+x /home/msh/tmp/script_cron.sh
+┏━ msh : ~/tmp
+
+┗━ nano script_cron.sh
+
+echo "Comand cron is complete" >> /home/msh/tmp/crontest.txt
+
+:w!
+
+:q
+
+
